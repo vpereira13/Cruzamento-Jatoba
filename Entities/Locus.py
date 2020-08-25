@@ -19,5 +19,8 @@ class Locus:
     def get_second(self):
         return self.__second
 
+    def is_zero(self):
+        return self.__first == "000" and self.__second == "000"
+
     def __str__(self):
         return self.__first + ' ' + self.__second
