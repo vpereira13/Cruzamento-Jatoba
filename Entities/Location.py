@@ -13,3 +13,6 @@ class Location:
 
     def get_y(self):
         return self.__y
+
+    def __str__(self):
+        return "(%d, %d)" % (self.__x, self.__y)
