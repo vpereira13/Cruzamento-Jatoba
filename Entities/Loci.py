@@ -19,7 +19,7 @@ class Loci:
         self.__collector = []
 
     def __str__(self):
-        return "\t{}\n\t{}\n\t{}\n\t{}\n\t{}\n\t{}\n\t{}\n\t{}".format(
+        return "{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}".format(
             str(self.__collector[0]),
             str(self.__collector[1]),
             str(self.__collector[2]),
