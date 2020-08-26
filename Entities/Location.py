@@ -15,4 +15,4 @@ class Location:
         return self.__y
 
     def __str__(self):
-        return "(%d, %d)" % (self.__x, self.__y)
+        return "{}\t{}".format(str(self.__x), str(self.__y))
