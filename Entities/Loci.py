@@ -15,6 +15,9 @@ class Loci:
     def all(self):
         return self.__collector
 
+    def clear(self):
+        self.__collector = []
+
     def __str__(self):
         return "\t{}\n\t{}\n\t{}\n\t{}\n\t{}\n\t{}\n\t{}\n\t{}".format(
             str(self.__collector[0]),
