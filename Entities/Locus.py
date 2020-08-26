@@ -23,4 +23,4 @@ class Locus:
         return self.__first == "000" and self.__second == "000"
 
     def __str__(self):
-        return "{} {}".format(self.__first, self.__second)
+        return "{}\t{}".format(self.__first, self.__second)
