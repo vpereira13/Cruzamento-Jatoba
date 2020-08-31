@@ -50,7 +50,7 @@ def main():
 
     for year in range(YEAR_MAX):
         if population.size() == 0:
-            logger.debug("Não há mais indivíduos. Finalizando execução.")
+            logger.info("Não há mais indivíduos. Finalizando execução.")
             exit(0)
 
         n_matches = secrets.randbelow(MATCHES)
