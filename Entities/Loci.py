@@ -3,13 +3,14 @@ Classe de loci:
     Coleção de 8 locus
 """
 from Entities.Locus import Locus
+from data.settings import N_LOCUS_IN_LOCI
 
 
 class Loci:
     __collector = []
 
     def add(self, locus: Locus):
-        if len(self.__collector) < 9:
+        if len(self.__collector) < N_LOCUS_IN_LOCI + 1:
             self.__collector.append(locus)
 
     def all(self):
@@ -19,13 +20,7 @@ class Loci:
         self.__collector = []
 
     def __str__(self):
-        return "{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}".format(
-            str(self.__collector[0]),
-            str(self.__collector[1]),
-            str(self.__collector[2]),
-            str(self.__collector[3]),
-            str(self.__collector[4]),
-            str(self.__collector[5]),
-            str(self.__collector[6]),
-            str(self.__collector[7]),
-        )
+        loci_str = ""
+        for locus in self.__collector:
+            loci_str += str(locus) + "\t"
+        return loci_str[:-1]

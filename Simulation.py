@@ -7,7 +7,12 @@ from Entities.Jatoba import Jatoba
 from Entities.Loci import Loci
 from Entities.Locus import Locus
 from Resolvers import LocationResolver, FecundationResolver, RecordPopulationResolver
-from data.settings import YEAR_MAX, MATCHES, SELF_FECUNDATION_RATE, INPUT_FILENAME, CHECKPOINT_PERIODICITY
+from data.settings import YEAR_MAX,\
+    MATCHES,\
+    SELF_FECUNDATION_RATE,\
+    INPUT_FILENAME,\
+    CHECKPOINT_PERIODICITY, \
+    N_LOCUS_IN_LOCI
 
 
 def load_initial_population():
@@ -22,7 +27,7 @@ def load_initial_population():
         location.set_y(int(parameters[3]))
         loci = Loci()
         loci.clear()
-        for i in range(4, 20, 2):
+        for i in range(4, (2 * N_LOCUS_IN_LOCI) + 4, 2):
             locus = Locus(parameters[i], parameters[i + 1])
             loci.add(locus)
         jatoba.set_identifier(int(parameters[0]))
